@@ -38,13 +38,13 @@ const EditProfile = ({user}) => {
 
     return(
         <>
-        <div className="flex justify-center my-10">
+        <div className="flex justify-center gap-10 my-10">
         <div className="flex justify-center my-15 mx-15">
-            <div className="card bg-base-300 w-96 shadow-sm">
-                <div className="card-body">
+            <div className="card bg-base-300 w-80 shadow-sm">
+                <div className="card-body p-4">
                     <h2 className="card-title justify-center">Edit Profile</h2>
                     <div>
-                        <label className="form-control w-full max-w-xs my-2">
+                        <label className="form-control w-full max-w-xs my-1">
                             <div className="label">
                             <span className="label-text">First Name</span>
                             </div>
@@ -56,7 +56,7 @@ const EditProfile = ({user}) => {
                             />
                         </label>
 
-                        <label className="form-control w-full max-w-xs my-2">
+                        <label className="form-control w-full max-w-xs my-1">
                             <div className="label">
                             <span className="label-text">Last Name</span>
                             </div>
@@ -68,7 +68,7 @@ const EditProfile = ({user}) => {
                             />
                         </label>
 
-                        <label className="form-control w-full max-w-xs my-2">
+                        <label className="form-control w-full max-w-xs my-1">
                             <div className="label">
                             <span className="label-text">Photo Url</span>
                             </div>
@@ -80,7 +80,7 @@ const EditProfile = ({user}) => {
                             />
                         </label>
 
-                        <label className="form-control w-full max-w-xs my-2">
+                        <label className="form-control w-full max-w-xs my-1">
                             <div className="label">
                             <span className="label-text">Age</span>
                             </div>
@@ -92,7 +92,7 @@ const EditProfile = ({user}) => {
                             />
                         </label>
 
-                        <label className="form-control w-full max-w-xs my-2">
+                        <label className="form-control w-full max-w-xs my-1">
                             <div className="label">
                             <span className="label-text">Gender</span>
                             </div>
@@ -104,7 +104,7 @@ const EditProfile = ({user}) => {
                             />
                         </label>
                         
-                        <label className="form-control w-full max-w-xs my-2">
+                        <label className="form-control w-full max-w-xs my-1">
                             <div className="label">
                             <span className="label-text">About</span>
                             </div>
@@ -116,7 +116,7 @@ const EditProfile = ({user}) => {
                             />
                         </label>
 
-                        <label className="form-control w-full max-w-xs my-2">
+                        <label className="form-control w-full max-w-xs my-1">
                             <div className="label">
                             <span className="label-text">Skills</span>
                             </div>
