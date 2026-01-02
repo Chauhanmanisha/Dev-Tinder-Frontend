@@ -22,7 +22,7 @@ const Body = () => {
             dispatch(addUser(res.data));
             
         }catch(err){
-            if(err.status === 400){
+            if (err.status === 400){
                 navigate("/login");
             }
         }
@@ -38,7 +38,7 @@ const Body = () => {
         <div>
             <NavBar/>
             <Outlet/>
-            {/* <Footer/> */}
+            <Footer/>
         </div>
     );
 };

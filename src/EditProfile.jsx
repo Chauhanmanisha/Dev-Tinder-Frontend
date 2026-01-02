@@ -9,10 +9,9 @@ const EditProfile = ({user}) => {
     const [firstName , setFirstName] = useState(user.firstName);
     const [lastName , setLastName] = useState(user.lastName);
     const [photoUrl , setPhotoUrl] = useState(user.photoUrl);
-    const [about , setAbout] = useState(user.about);
-    const [age , setAge] = useState(user.age);
-    const [gender , setGender] = useState(user.gender);
-    const [skills, setSkills] = useState(user.skills);
+    const [about , setAbout] = useState(user.about || "");
+    const [age , setAge] = useState(user.age || "");
+    const [gender , setGender] = useState(user.gender || "");
     const [error, setError] = useState("");
     const dispatch = useDispatch();
     
@@ -21,7 +20,7 @@ const EditProfile = ({user}) => {
     const saveProfile = async() => {
         setError("");
         try{
-            const res = await axios.patch(BASE_URL+"/profile/edit",{ firstName, lastName, photoUrl, age, gender, about },
+            const res = await axios.patch(BASE_URL+"/profile/edit",{ firstName, lastName, photoUrl, age, gender, about},
                 {withCredentials: true}
             );
             dispatch(addUser(res?.data?.data));
@@ -31,7 +30,7 @@ const EditProfile = ({user}) => {
             }, 3000);
         }
         catch(err){
-            setError(err.response.data);
+            setError(err?.response?.data || err.message || "Something went wrong");
         }
     };
 
@@ -113,18 +112,6 @@ const EditProfile = ({user}) => {
                             value={about}
                             className="input input-bordered w-full max-w-xs"
                             onChange={(e) => setAbout(e.target.value)}
-                            />
-                        </label>
-
-                        <label className="form-control w-full max-w-xs my-1">
-                            <div className="label">
-                            <span className="label-text">Skills</span>
-                            </div>
-                            <input
-                            type="text"
-                            value={skills}
-                            className="input input-bordered w-full max-w-xs"
-                            onChange={(e) => setSkills(e.target.value)}
                             />
                         </label>
 
